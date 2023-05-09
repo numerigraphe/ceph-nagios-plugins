@@ -186,7 +186,7 @@ def main():
 
     elif err:
         # read only first line of error
-        one_line = err.split('\n')[0]
+        one_line = str(err).split('\n')[0]
         if '-1 ' in one_line:
             idx = one_line.rfind('-1 ')
             print('ERROR: %s: %s' % (ceph_exec, one_line[idx+len('-1 '):]))
